@@ -1,0 +1,25 @@
+Ref,Qty,Value,Part,Footprint,Notes
+BAT1,1,2S_Battery_Connector,XT30/PH2,Connector_Generic:Conn_01x02,Battery connector matching pack
+FUSE1,1,2A_quick-break,Fuse, Fuse:THT_FUSE_2A,Place on BAT+ input before switch
+SW1,1,Slide_Switch,Power switch,Switch_THT:SW_SPDT,ON/OFF for system
+BMS1,1,2S_5A_BMS,2S_5A_BMS,Generic_Module:BMS_2S,Protects pack and charging
+U_BUCK,1,MP1584EN_module,MP1584,Module:MP1584_Module,Adjust to 5.0V output; input from SW_OUT+
+U_3V3,1,AMS1117-3.3,AMS1117,Regulator_SOT-223:AMS1117-3.3,Add input/output caps per datasheet
+U_INA,1,INA3221,INA3221,SOT-23-8:INA3221,Monitor BAT/5V/3.3V shunts; connect to I2C_SDA/SCL
+U_TCA,1,TCA9548A,TCA9548A,TSSOP-16:TCA9548A,I2C multiplexer for address conflicts
+U_ESP32,1,ESP32-S3-N16R8_devkit,ESP32-S3-DevKit-N16R8,Module:ESP32-S3-DevKit-N16R8,Dev board per AliExpress listing
+U_ICM,1,ICM20948,ICM20948,LGA_24:ICM20948,IMU on TCA channel 1
+U_GY91,1,GY-91,GY-91,Module:GY-91,Optional; ensure no sensor duplication
+U_MS5,1,MS5611,MS5611,Module:MS5611,Barometer on TCA channel 2 (I2C)
+U_RTC,1,DS3231,DS3231,SO-8:DS3231,RTC on TCA channel 3; VBAT coin-cell footprint optional
+U_GPS,1,HGLRC_M100-5883,GPS_HGLRC,Module:GPS_HGLRC_M100,UART1 (3.3V)
+U_LORA,1,LLCC68,LLCC68,Module:LLCC68,LoRa radio on SPI
+U_SD,1,microSD_SPI,microSD_SPI,microSD:MicroSD_Card,SPI mode; ensure 3.3V level
+U_OPTO,1,Optocoupler,Any optocoupler,DIP-4:4,Used for pyro safety isolation
+Q_PYRO,1,Logic_MOSFET,IRLZ44/logicFET,TO-220:IRLZ44,Low Rds(on) logic-level MOSFET for pyro
+PYRO1,1,LR7843_module,LR7843,Module:LR7843,Pyro module; keep safe separation and safety key
+J_ANT_GPS,1,u.FL_ant,u.FL,Connector:u.FL, GPS antenna connector
+J_ANT_LORA,1,u.FL_ant,u.FL,Connector:u.FL, LoRa antenna connector
+TP_BAT,1,TestPoint,BAT_TP,Testpoint:Testpoint_Pin,Test point for battery+
+TP_5V,1,TestPoint,5V_TP,Testpoint:Testpoint_Pin,Test point for 5V rail
+TP_3V3,1,TestPoint,3V3_TP,Testpoint:Testpoint_Pin,Test point for 3.3V rail
